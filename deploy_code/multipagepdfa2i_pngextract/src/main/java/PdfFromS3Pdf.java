@@ -62,6 +62,10 @@ public class PdfFromS3Pdf {
         PDDocument inputDocument = PDDocument.load(inputPdf);
         PDFRenderer pdfRenderer = new PDFRenderer(inputDocument);
 
+        // EPL
+        String epl_bucket = "epl-a2i-test-3798749387";
+        System.out.println("EPL Bucket: " + epl_bucket);
+
         for(int cur_page = 0; cur_page < inputDocument.getNumberOfPages(); ++cur_page) {
             BufferedImage image = pdfRenderer.renderImageWithDPI(cur_page, 300, org.apache.pdfbox.rendering.ImageType.RGB);
             String new_key = "wip/" + cur_id + "/" + String.valueOf(cur_page) + ".png";
@@ -74,6 +78,14 @@ public class PdfFromS3Pdf {
             ByteArrayOutputStream os = new ByteArrayOutputStream();
     
             UploadToS3(cur_bucket, new_key, "application/png", imageInByte);
+
+             // EPL
+            String epl_key = "input/" + cur_key.replace("uploads/", "") + "_" + String.valueOf(cur_page) + ".png";
+            System.out.println("EPL Key: " + epl_key);
+
+            
+            UploadToS3(epl_bucket, epl_key, "application/png", imageInByte);
+
 
             image_keys.add(String.valueOf(cur_page));
         }

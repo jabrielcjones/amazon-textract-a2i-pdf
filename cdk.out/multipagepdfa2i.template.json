@@ -1,0 +1,1770 @@
+{
+  "Resources": {
+    "multipagepdfa2i1BE8D0A8": {
+      "Type": "AWS::S3::Bucket",
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i/Resource"
+      }
+    },
+    "multipagepdfa2iNotifications6F579C79": {
+      "Type": "Custom::S3BucketNotifications",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691",
+            "Arn"
+          ]
+        },
+        "BucketName": {
+          "Ref": "multipagepdfa2i1BE8D0A8"
+        },
+        "NotificationConfiguration": {
+          "QueueConfigurations": [
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "pdf"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "pDf"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "pDF"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "pdF"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "PDF"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "Pdf"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "png"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "pNg"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "pNG"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "pnG"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "PNG"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "Png"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "jpg"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "jPg"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "jPG"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "jpG"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "JPG"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": "Jpg"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "uploads/"
+                    }
+                  ]
+                }
+              },
+              "QueueArn": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "DependsOn": [
+        "multipagepdfa2isfsqsPolicy23F7D822",
+        "multipagepdfa2isfsqs6271462A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i/Notifications/Resource"
+      }
+    },
+    "multia2ipdfcallbackE428C7FA": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "jobid",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "callback_token",
+            "KeyType": "RANGE"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "jobid",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "callback_token",
+            "AttributeType": "S"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "TableName": "multia2ipdf_callback"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multia2ipdf_callback/Resource"
+      }
+    },
+    "multipagepdfa2isfsqs6271462A": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "QueueName": "multipagepdfa2i_sf_sqs",
+        "VisibilityTimeout": 300
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_sf_sqs/Resource"
+      }
+    },
+    "multipagepdfa2isfsqsPolicy23F7D822": {
+      "Type": "AWS::SQS::QueuePolicy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "sqs:SendMessage",
+                "sqs:GetQueueAttributes",
+                "sqs:GetQueueUrl"
+              ],
+              "Condition": {
+                "ArnLike": {
+                  "aws:SourceArn": {
+                    "Fn::GetAtt": [
+                      "multipagepdfa2i1BE8D0A8",
+                      "Arn"
+                    ]
+                  }
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "s3.amazonaws.com"
+              },
+              "Resource": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Queues": [
+          {
+            "Ref": "multipagepdfa2isfsqs6271462A"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_sf_sqs/Policy/Resource"
+      }
+    },
+    "multipagepdfa2itextractsqs6E080302": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "QueueName": "multipagepdfa2i_textract_sqs",
+        "VisibilityTimeout": 180
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_textract_sqs/Resource"
+      }
+    },
+    "multipagepdfa2ilamrolekickoffFDBDF67D": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_kickoff/Resource"
+      }
+    },
+    "multipagepdfa2ilamrolekickoffDefaultPolicy614AD7A4": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:Read",
+                "s3:PutObject",
+                "lambda:InvokeFunction",
+                "states:StartExecution",
+                "sts:AssumeRole",
+                "sqs:DeleteMessage",
+                "sqs:ReceiveMessage",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "sqs:ReceiveMessage",
+                "sqs:ChangeMessageVisibility",
+                "sqs:GetQueueUrl",
+                "sqs:DeleteMessage",
+                "sqs:GetQueueAttributes"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2isfsqs6271462A",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "multipagepdfa2ilamrolekickoffDefaultPolicy614AD7A4",
+        "Roles": [
+          {
+            "Ref": "multipagepdfa2ilamrolekickoffFDBDF67D"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_kickoff/DefaultPolicy/Resource"
+      }
+    },
+    "multipagepdfa2ilamrolepngextractD218F9FD": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_pngextract/Resource"
+      }
+    },
+    "multipagepdfa2ilamrolepngextractDefaultPolicy7A0AD937": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "sts:AssumeRole",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "multipagepdfa2ilamrolepngextractDefaultPolicy7A0AD937",
+        "Roles": [
+          {
+            "Ref": "multipagepdfa2ilamrolepngextractD218F9FD"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_pngextract/DefaultPolicy/Resource"
+      }
+    },
+    "multipagepdfa2ilamroleanalyzepdf7AF514D8": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_analyzepdf/Resource"
+      }
+    },
+    "multipagepdfa2ilamroleanalyzepdfDefaultPolicy3270794C": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:Object",
+                "s3:PutObject",
+                "s3:GetObject",
+                "lambda:InvokeFunction",
+                "states:SendTaskSuccess",
+                "dynamodb:PutItem",
+                "textract:AnalyzeDocument",
+                "sqs:DeleteMessage",
+                "sqs:ReceiveMessage",
+                "sagemaker:StartHumanLoop",
+                "sts:AssumeRole",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "sqs:ReceiveMessage",
+                "sqs:ChangeMessageVisibility",
+                "sqs:GetQueueUrl",
+                "sqs:DeleteMessage",
+                "sqs:GetQueueAttributes"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2itextractsqs6E080302",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "multipagepdfa2ilamroleanalyzepdfDefaultPolicy3270794C",
+        "Roles": [
+          {
+            "Ref": "multipagepdfa2ilamroleanalyzepdf7AF514D8"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_analyzepdf/DefaultPolicy/Resource"
+      }
+    },
+    "multipagepdfa2ilamrolehumancomplete0FA866AF": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_humancomplete/Resource"
+      }
+    },
+    "multipagepdfa2ilamrolehumancompleteDefaultPolicy0C30B1CB": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:Object",
+                "s3:PutObject",
+                "s3:GetObject",
+                "states:SendTaskSuccess",
+                "dynamodb:Query",
+                "sts:AssumeRole",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "multipagepdfa2ilamrolehumancompleteDefaultPolicy0C30B1CB",
+        "Roles": [
+          {
+            "Ref": "multipagepdfa2ilamrolehumancomplete0FA866AF"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_humancomplete/DefaultPolicy/Resource"
+      }
+    },
+    "multipagepdfa2ilamrolewrapupC95926A1": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_wrapup/Resource"
+      }
+    },
+    "multipagepdfa2ilamrolewrapupDefaultPolicy209224FB": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:Object",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListBucket",
+                "sts:AssumeRole",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "multipagepdfa2ilamrolewrapupDefaultPolicy209224FB",
+        "Roles": [
+          {
+            "Ref": "multipagepdfa2ilamrolewrapupC95926A1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_lam_role_wrapup/DefaultPolicy/Resource"
+      }
+    },
+    "multipagepdfa2ipngextractDD0BB0CE": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3BucketBA38A70B"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3VersionKey59D503D6"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3VersionKey59D503D6"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "Lambda::handleRequest",
+        "Role": {
+          "Fn::GetAtt": [
+            "multipagepdfa2ilamrolepngextractD218F9FD",
+            "Arn"
+          ]
+        },
+        "Runtime": "java11",
+        "FunctionName": "multipagepdfa2i_pngextract",
+        "MemorySize": 3000,
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "multipagepdfa2ilamrolepngextractDefaultPolicy7A0AD937",
+        "multipagepdfa2ilamrolepngextractD218F9FD"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_pngextract/Resource",
+        "aws:asset:path": "asset.11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32.jar",
+        "aws:asset:property": "Code"
+      }
+    },
+    "multipagepdfa2ianalyzepdf634F2189": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3Bucket4E6AC842"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3VersionKey4B370E43"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3VersionKey4B370E43"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "lambda_function.lambda_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "multipagepdfa2ilamroleanalyzepdf7AF514D8",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.8",
+        "Environment": {
+          "Variables": {
+            "sqs_url": {
+              "Ref": "multipagepdfa2itextractsqs6E080302"
+            },
+            "human_workflow_arn": ""
+          }
+        },
+        "FunctionName": "multipagepdfa2i_analyzepdf",
+        "MemorySize": 3000,
+        "Timeout": 180
+      },
+      "DependsOn": [
+        "multipagepdfa2ilamroleanalyzepdfDefaultPolicy3270794C",
+        "multipagepdfa2ilamroleanalyzepdf7AF514D8"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_analyzepdf/Resource",
+        "aws:asset:path": "asset.dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5",
+        "aws:asset:property": "Code"
+      }
+    },
+    "multipagepdfa2ianalyzepdfSqsEventSourcemultipagepdfa2imultipagepdfa2itextractsqs2C6A71821B13F6C4": {
+      "Type": "AWS::Lambda::EventSourceMapping",
+      "Properties": {
+        "EventSourceArn": {
+          "Fn::GetAtt": [
+            "multipagepdfa2itextractsqs6E080302",
+            "Arn"
+          ]
+        },
+        "FunctionName": {
+          "Ref": "multipagepdfa2ianalyzepdf634F2189"
+        },
+        "BatchSize": 1
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_analyzepdf/SqsEventSource:multipagepdfa2imultipagepdfa2itextractsqs2C6A7182/Resource"
+      }
+    },
+    "multipagepdfa2ihumancomplete182FEA89": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3Bucket7F9F1FCB"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3VersionKey83C1EAFC"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3VersionKey83C1EAFC"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "lambda_function.lambda_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "multipagepdfa2ilamrolehumancomplete0FA866AF",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.8",
+        "FunctionName": "multipagepdfa2i_humancomplete",
+        "MemorySize": 3000,
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "multipagepdfa2ilamrolehumancompleteDefaultPolicy0C30B1CB",
+        "multipagepdfa2ilamrolehumancomplete0FA866AF"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_humancomplete/Resource",
+        "aws:asset:path": "asset.392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0",
+        "aws:asset:property": "Code"
+      }
+    },
+    "multipagepdfa2ihumancompleteAllowEventRulemultipagepdfa2imultipadepdfa2iHumanReviewComplete23C2B3E30177ADBE": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "multipagepdfa2ihumancomplete182FEA89",
+            "Arn"
+          ]
+        },
+        "Principal": "events.amazonaws.com",
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "multipadepdfa2iHumanReviewComplete9B2C26FE",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_humancomplete/AllowEventRulemultipagepdfa2imultipadepdfa2iHumanReviewComplete23C2B3E3"
+      }
+    },
+    "multipagepdfa2iwrapupA9D980CE": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3BucketA8221975"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3VersionKey14245DD7"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3VersionKey14245DD7"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "lambda_function.lambda_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "multipagepdfa2ilamrolewrapupC95926A1",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.8",
+        "FunctionName": "multipagepdfa2i_wrapup",
+        "MemorySize": 3000,
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "multipagepdfa2ilamrolewrapupDefaultPolicy209224FB",
+        "multipagepdfa2ilamrolewrapupC95926A1"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_wrapup/Resource",
+        "aws:asset:path": "asset.16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36",
+        "aws:asset:property": "Code"
+      }
+    },
+    "multipagepdfa2istepfunctionRole598387CE": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "states.",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ".amazonaws.com"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_stepfunction/Role/Resource"
+      }
+    },
+    "multipagepdfa2istepfunctionRoleDefaultPolicyA027783E": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2ipngextractDD0BB0CE",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2iwrapupA9D980CE",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "sqs:SendMessage",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "multipagepdfa2itextractsqs6E080302",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "multipagepdfa2istepfunctionRoleDefaultPolicyA027783E",
+        "Roles": [
+          {
+            "Ref": "multipagepdfa2istepfunctionRole598387CE"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_stepfunction/Role/DefaultPolicy/Resource"
+      }
+    },
+    "multipagepdfa2istepfunctionFBF54DA9": {
+      "Type": "AWS::StepFunctions::StateMachine",
+      "Properties": {
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "multipagepdfa2istepfunctionRole598387CE",
+            "Arn"
+          ]
+        },
+        "DefinitionString": {
+          "Fn::Join": [
+            "",
+            [
+              "{\"StartAt\":\"PDF or Image?\",\"States\":{\"PDF or Image?\":{\"Type\":\"Choice\",\"Choices\":[{\"Variable\":\"$.extension\",\"StringEquals\":\"pdf\",\"Next\":\"PDF. Conver to PNGs\"},{\"Variable\":\"$.extension\",\"StringEquals\":\"png\",\"Next\":\"Image. Passing.\"},{\"Variable\":\"$.extension\",\"StringEquals\":\"jpg\",\"Next\":\"Image. Passing.\"}]},\"PDF. Conver to PNGs\":{\"Next\":\"Process_Map\",\"Type\":\"Task\",\"ResultPath\":\"$.image_keys\",\"Resource\":\"",
+              {
+                "Fn::GetAtt": [
+                  "multipagepdfa2ipngextractDD0BB0CE",
+                  "Arn"
+                ]
+              },
+              "\"},\"Process_Map\":{\"Type\":\"Map\",\"ResultPath\":null,\"Next\":\"Wrapup and Clean\",\"Parameters\":{\"id.$\":\"$.id\",\"bucket.$\":\"$.bucket\",\"key.$\":\"$.key\",\"wip_key.$\":\"$$.Map.Item.Value\"},\"Iterator\":{\"StartAt\":\"Perform Textract and A2I\",\"States\":{\"Perform Textract and A2I\":{\"End\":true,\"Type\":\"Task\",\"Resource\":\"arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":states:::sqs:sendMessage.waitForTaskToken\",\"Parameters\":{\"QueueUrl\":\"",
+              {
+                "Ref": "multipagepdfa2itextractsqs6E080302"
+              },
+              "\",\"MessageBody\":{\"token.$\":\"$$.Task.Token\",\"id.$\":\"$.id\",\"bucket.$\":\"$.bucket\",\"key.$\":\"$.key\",\"wip_key.$\":\"$.wip_key\"}}}}},\"ItemsPath\":\"$.image_keys\"},\"Image. Passing.\":{\"Type\":\"Pass\",\"Result\":[\"single_image\"],\"ResultPath\":\"$.image_keys\",\"Next\":\"Process_Map\"},\"Wrapup and Clean\":{\"End\":true,\"Type\":\"Task\",\"Resource\":\"arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":states:::lambda:invoke\",\"Parameters\":{\"FunctionName\":\"",
+              {
+                "Fn::GetAtt": [
+                  "multipagepdfa2iwrapupA9D980CE",
+                  "Arn"
+                ]
+              },
+              "\",\"Payload.$\":\"$\"}}}}"
+            ]
+          ]
+        },
+        "StateMachineName": "multipagepdfa2i_stepfunction"
+      },
+      "DependsOn": [
+        "multipagepdfa2istepfunctionRoleDefaultPolicyA027783E",
+        "multipagepdfa2istepfunctionRole598387CE"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_stepfunction/Resource"
+      }
+    },
+    "multipagepdfa2ikickoff4B6F939D": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3Bucket106913D7"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3VersionKeyE8489DED"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3VersionKeyE8489DED"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "lambda_function.lambda_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "multipagepdfa2ilamrolekickoffFDBDF67D",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.8",
+        "Environment": {
+          "Variables": {
+            "sqs_url": {
+              "Ref": "multipagepdfa2isfsqs6271462A"
+            },
+            "state_machine_arn": {
+              "Ref": "multipagepdfa2istepfunctionFBF54DA9"
+            }
+          }
+        },
+        "FunctionName": "multipagepdfa2i_kickoff",
+        "MemorySize": 3000,
+        "Timeout": 300
+      },
+      "DependsOn": [
+        "multipagepdfa2ilamrolekickoffDefaultPolicy614AD7A4",
+        "multipagepdfa2ilamrolekickoffFDBDF67D"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_kickoff/Resource",
+        "aws:asset:path": "asset.da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6",
+        "aws:asset:property": "Code"
+      }
+    },
+    "multipagepdfa2ikickoffSqsEventSourcemultipagepdfa2imultipagepdfa2isfsqsCEAC74840BF6C968": {
+      "Type": "AWS::Lambda::EventSourceMapping",
+      "Properties": {
+        "EventSourceArn": {
+          "Fn::GetAtt": [
+            "multipagepdfa2isfsqs6271462A",
+            "Arn"
+          ]
+        },
+        "FunctionName": {
+          "Ref": "multipagepdfa2ikickoff4B6F939D"
+        },
+        "BatchSize": 1
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipagepdfa2i_kickoff/SqsEventSource:multipagepdfa2imultipagepdfa2isfsqsCEAC7484/Resource"
+      }
+    },
+    "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource"
+      }
+    },
+    "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:PutBucketNotification",
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+        "Roles": [
+          {
+            "Ref": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource"
+      }
+    },
+    "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Description": "AWS CloudFormation handler for \"Custom::S3BucketNotifications\" resources (@aws-cdk/aws-s3)",
+        "Code": {
+          "ZipFile": "exports.handler = (event, context) => {\n    // eslint-disable-next-line @typescript-eslint/no-require-imports, import/no-extraneous-dependencies\n    const s3 = new (require('aws-sdk').S3)();\n    // eslint-disable-next-line @typescript-eslint/no-require-imports\n    const https = require('https');\n    // eslint-disable-next-line @typescript-eslint/no-require-imports\n    const url = require('url');\n    log(JSON.stringify(event, undefined, 2));\n    const props = event.ResourceProperties;\n    if (event.RequestType === 'Delete') {\n        props.NotificationConfiguration = {}; // this is how you clean out notifications\n    }\n    const req = {\n        Bucket: props.BucketName,\n        NotificationConfiguration: props.NotificationConfiguration,\n    };\n    return s3.putBucketNotificationConfiguration(req, (err, data) => {\n        log({ err, data });\n        if (err) {\n            return submitResponse('FAILED', err.message + `\\nMore information in CloudWatch Log Stream: ${context.logStreamName}`);\n        }\n        else {\n            return submitResponse('SUCCESS');\n        }\n    });\n    function log(obj) {\n        console.error(event.RequestId, event.StackId, event.LogicalResourceId, obj);\n    }\n    // eslint-disable-next-line max-len\n    // adapted from https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-cfnresponsemodule\n    // to allow sending an error messge as a reason.\n    function submitResponse(responseStatus, reason) {\n        const responseBody = JSON.stringify({\n            Status: responseStatus,\n            Reason: reason || 'See the details in CloudWatch Log Stream: ' + context.logStreamName,\n            PhysicalResourceId: event.PhysicalResourceId || event.LogicalResourceId,\n            StackId: event.StackId,\n            RequestId: event.RequestId,\n            LogicalResourceId: event.LogicalResourceId,\n            NoEcho: false,\n        });\n        log({ responseBody });\n        const parsedUrl = url.parse(event.ResponseURL);\n        const options = {\n            hostname: parsedUrl.hostname,\n            port: 443,\n            path: parsedUrl.path,\n            method: 'PUT',\n            headers: {\n                'content-type': '',\n                'content-length': responseBody.length,\n            },\n        };\n        const request = https.request(options, (r) => {\n            log({ statusCode: r.statusCode, statusMessage: r.statusMessage });\n            context.done();\n        });\n        request.on('error', (error) => {\n            log({ sendError: error });\n            context.done();\n        });\n        request.write(responseBody);\n        request.end();\n    }\n};"
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Timeout": 300
+      },
+      "DependsOn": [
+        "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+        "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource"
+      }
+    },
+    "multipadepdfa2iHumanReviewComplete9B2C26FE": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "EventPattern": {
+          "detail-type": [
+            "SageMaker A2I HumanLoop Status Change"
+          ],
+          "source": [
+            "aws.sagemaker"
+          ]
+        },
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::GetAtt": [
+                "multipagepdfa2ihumancomplete182FEA89",
+                "Arn"
+              ]
+            },
+            "Id": "Target0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "multipagepdfa2i/multipadepdfa2i_HumanReviewComplete/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.87.1,@aws-cdk/assets=1.54.0,@aws-cdk/aws-apigateway=1.54.0,@aws-cdk/aws-applicationautoscaling=1.54.0,@aws-cdk/aws-autoscaling=1.54.0,@aws-cdk/aws-autoscaling-common=1.54.0,@aws-cdk/aws-autoscaling-hooktargets=1.54.0,@aws-cdk/aws-batch=1.54.0,@aws-cdk/aws-certificatemanager=1.54.0,@aws-cdk/aws-cloudformation=1.54.0,@aws-cdk/aws-cloudfront=1.54.0,@aws-cdk/aws-cloudwatch=1.54.0,@aws-cdk/aws-codebuild=1.54.0,@aws-cdk/aws-codecommit=1.54.0,@aws-cdk/aws-codeguruprofiler=1.54.0,@aws-cdk/aws-codepipeline=1.54.0,@aws-cdk/aws-cognito=1.54.0,@aws-cdk/aws-dynamodb=1.54.0,@aws-cdk/aws-ec2=1.54.0,@aws-cdk/aws-ecr=1.54.0,@aws-cdk/aws-ecr-assets=1.54.0,@aws-cdk/aws-ecs=1.54.0,@aws-cdk/aws-efs=1.54.0,@aws-cdk/aws-elasticloadbalancing=1.54.0,@aws-cdk/aws-elasticloadbalancingv2=1.54.0,@aws-cdk/aws-events=1.54.0,@aws-cdk/aws-events-targets=1.54.0,@aws-cdk/aws-glue=1.54.0,@aws-cdk/aws-iam=1.54.0,@aws-cdk/aws-kinesis=1.54.0,@aws-cdk/aws-kms=1.54.0,@aws-cdk/aws-lambda=1.54.0,@aws-cdk/aws-lambda-event-sources=1.54.0,@aws-cdk/aws-logs=1.54.0,@aws-cdk/aws-route53=1.54.0,@aws-cdk/aws-route53-targets=1.54.0,@aws-cdk/aws-s3=1.54.0,@aws-cdk/aws-s3-assets=1.54.0,@aws-cdk/aws-s3-deployment=1.54.0,@aws-cdk/aws-s3-notifications=1.54.0,@aws-cdk/aws-sam=1.54.0,@aws-cdk/aws-secretsmanager=1.54.0,@aws-cdk/aws-servicediscovery=1.54.0,@aws-cdk/aws-sns=1.54.0,@aws-cdk/aws-sns-subscriptions=1.54.0,@aws-cdk/aws-sqs=1.54.0,@aws-cdk/aws-ssm=1.54.0,@aws-cdk/aws-stepfunctions=1.54.0,@aws-cdk/aws-stepfunctions-tasks=1.54.0,@aws-cdk/cloud-assembly-schema=1.54.0,@aws-cdk/core=1.54.0,@aws-cdk/custom-resources=1.54.0,@aws-cdk/cx-api=1.54.0,@aws-cdk/region-info=1.54.0,jsii-runtime=Python/3.8.5"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Parameters": {
+    "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3BucketBA38A70B": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32\""
+    },
+    "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3VersionKey59D503D6": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32\""
+    },
+    "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32ArtifactHash706EB370": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32\""
+    },
+    "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3Bucket4E6AC842": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5\""
+    },
+    "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3VersionKey4B370E43": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5\""
+    },
+    "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5ArtifactHashF62E5200": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5\""
+    },
+    "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3Bucket7F9F1FCB": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0\""
+    },
+    "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3VersionKey83C1EAFC": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0\""
+    },
+    "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0ArtifactHash3FF94DCF": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0\""
+    },
+    "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3BucketA8221975": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36\""
+    },
+    "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3VersionKey14245DD7": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36\""
+    },
+    "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36ArtifactHashEF23522B": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36\""
+    },
+    "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3Bucket106913D7": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6\""
+    },
+    "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3VersionKeyE8489DED": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6\""
+    },
+    "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6ArtifactHash576C6883": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6\""
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

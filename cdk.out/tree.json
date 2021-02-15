@@ -1,0 +1,1416 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "multipagepdfa2i": {
+        "id": "multipagepdfa2i",
+        "path": "multipagepdfa2i",
+        "children": {
+          "multipagepdfa2i": {
+            "id": "multipagepdfa2i",
+            "path": "multipagepdfa2i/multipagepdfa2i",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {}
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "multipagepdfa2i/multipagepdfa2i/Notifications",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i/Notifications/Resource"
+                  }
+                }
+              }
+            }
+          },
+          "multia2ipdf_callback": {
+            "id": "multia2ipdf_callback",
+            "path": "multipagepdfa2i/multia2ipdf_callback",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multia2ipdf_callback/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "jobid",
+                        "keyType": "HASH"
+                      },
+                      {
+                        "attributeName": "callback_token",
+                        "keyType": "RANGE"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "jobid",
+                        "attributeType": "S"
+                      },
+                      {
+                        "attributeName": "callback_token",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5
+                    },
+                    "tableName": "multia2ipdf_callback"
+                  }
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "multipagepdfa2i/multia2ipdf_callback/ScalingRole"
+              }
+            }
+          },
+          "multipagepdfa2i_sf_sqs": {
+            "id": "multipagepdfa2i_sf_sqs",
+            "path": "multipagepdfa2i/multipagepdfa2i_sf_sqs",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_sf_sqs/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "queueName": "multipagepdfa2i_sf_sqs",
+                    "visibilityTimeout": 300
+                  }
+                }
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "multipagepdfa2i/multipagepdfa2i_sf_sqs/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i_sf_sqs/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SQS::QueuePolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "sqs:SendMessage",
+                                "sqs:GetQueueAttributes",
+                                "sqs:GetQueueUrl"
+                              ],
+                              "Condition": {
+                                "ArnLike": {
+                                  "aws:SourceArn": {
+                                    "Fn::GetAtt": [
+                                      "multipagepdfa2i1BE8D0A8",
+                                      "Arn"
+                                    ]
+                                  }
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "s3.amazonaws.com"
+                              },
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "multipagepdfa2isfsqs6271462A",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "queues": [
+                          {
+                            "Ref": "multipagepdfa2isfsqs6271462A"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_textract_sqs": {
+            "id": "multipagepdfa2i_textract_sqs",
+            "path": "multipagepdfa2i/multipagepdfa2i_textract_sqs",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_textract_sqs/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "queueName": "multipagepdfa2i_textract_sqs",
+                    "visibilityTimeout": 180
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_lam_role_kickoff": {
+            "id": "multipagepdfa2i_lam_role_kickoff",
+            "path": "multipagepdfa2i/multipagepdfa2i_lam_role_kickoff",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_kickoff/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    }
+                  }
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_kickoff/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i_lam_role_kickoff/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:Read",
+                                "s3:PutObject",
+                                "lambda:InvokeFunction",
+                                "states:StartExecution",
+                                "sts:AssumeRole",
+                                "sqs:DeleteMessage",
+                                "sqs:ReceiveMessage",
+                                "logs:CreateLogGroup",
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            },
+                            {
+                              "Action": [
+                                "sqs:ReceiveMessage",
+                                "sqs:ChangeMessageVisibility",
+                                "sqs:GetQueueUrl",
+                                "sqs:DeleteMessage",
+                                "sqs:GetQueueAttributes"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "multipagepdfa2isfsqs6271462A",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "multipagepdfa2ilamrolekickoffDefaultPolicy614AD7A4",
+                        "roles": [
+                          {
+                            "Ref": "multipagepdfa2ilamrolekickoffFDBDF67D"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_lam_role_pngextract": {
+            "id": "multipagepdfa2i_lam_role_pngextract",
+            "path": "multipagepdfa2i/multipagepdfa2i_lam_role_pngextract",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_pngextract/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    }
+                  }
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_pngextract/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i_lam_role_pngextract/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:GetObject",
+                                "s3:PutObject",
+                                "sts:AssumeRole",
+                                "logs:CreateLogGroup",
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "multipagepdfa2ilamrolepngextractDefaultPolicy7A0AD937",
+                        "roles": [
+                          {
+                            "Ref": "multipagepdfa2ilamrolepngextractD218F9FD"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_lam_role_analyzepdf": {
+            "id": "multipagepdfa2i_lam_role_analyzepdf",
+            "path": "multipagepdfa2i/multipagepdfa2i_lam_role_analyzepdf",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_analyzepdf/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    }
+                  }
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_analyzepdf/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i_lam_role_analyzepdf/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:Object",
+                                "s3:PutObject",
+                                "s3:GetObject",
+                                "lambda:InvokeFunction",
+                                "states:SendTaskSuccess",
+                                "dynamodb:PutItem",
+                                "textract:AnalyzeDocument",
+                                "sqs:DeleteMessage",
+                                "sqs:ReceiveMessage",
+                                "sagemaker:StartHumanLoop",
+                                "sts:AssumeRole",
+                                "logs:CreateLogGroup",
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            },
+                            {
+                              "Action": [
+                                "sqs:ReceiveMessage",
+                                "sqs:ChangeMessageVisibility",
+                                "sqs:GetQueueUrl",
+                                "sqs:DeleteMessage",
+                                "sqs:GetQueueAttributes"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "multipagepdfa2itextractsqs6E080302",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "multipagepdfa2ilamroleanalyzepdfDefaultPolicy3270794C",
+                        "roles": [
+                          {
+                            "Ref": "multipagepdfa2ilamroleanalyzepdf7AF514D8"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_lam_role_humancomplete": {
+            "id": "multipagepdfa2i_lam_role_humancomplete",
+            "path": "multipagepdfa2i/multipagepdfa2i_lam_role_humancomplete",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_humancomplete/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    }
+                  }
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_humancomplete/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i_lam_role_humancomplete/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:Object",
+                                "s3:PutObject",
+                                "s3:GetObject",
+                                "states:SendTaskSuccess",
+                                "dynamodb:Query",
+                                "sts:AssumeRole",
+                                "logs:CreateLogGroup",
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "multipagepdfa2ilamrolehumancompleteDefaultPolicy0C30B1CB",
+                        "roles": [
+                          {
+                            "Ref": "multipagepdfa2ilamrolehumancomplete0FA866AF"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_lam_role_wrapup": {
+            "id": "multipagepdfa2i_lam_role_wrapup",
+            "path": "multipagepdfa2i/multipagepdfa2i_lam_role_wrapup",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_wrapup/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    }
+                  }
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "multipagepdfa2i/multipagepdfa2i_lam_role_wrapup/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i_lam_role_wrapup/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:Object",
+                                "s3:GetObject",
+                                "s3:PutObject",
+                                "s3:DeleteObject",
+                                "s3:ListBucket",
+                                "sts:AssumeRole",
+                                "logs:CreateLogGroup",
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "multipagepdfa2ilamrolewrapupDefaultPolicy209224FB",
+                        "roles": [
+                          {
+                            "Ref": "multipagepdfa2ilamrolewrapupC95926A1"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_pngextract": {
+            "id": "multipagepdfa2i_pngextract",
+            "path": "multipagepdfa2i/multipagepdfa2i_pngextract",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "multipagepdfa2i/multipagepdfa2i_pngextract/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "multipagepdfa2i/multipagepdfa2i_pngextract/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "multipagepdfa2i/multipagepdfa2i_pngextract/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_pngextract/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3BucketBA38A70B"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3VersionKey59D503D6"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3VersionKey59D503D6"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "Lambda::handleRequest",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "multipagepdfa2ilamrolepngextractD218F9FD",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "java11",
+                    "functionName": "multipagepdfa2i_pngextract",
+                    "memorySize": 3000,
+                    "timeout": 900
+                  }
+                }
+              }
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "multipagepdfa2i/AssetParameters",
+            "children": {
+              "11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32": {
+                "id": "11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32",
+                "path": "multipagepdfa2i/AssetParameters/11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "multipagepdfa2i/AssetParameters/11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "multipagepdfa2i/AssetParameters/11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "multipagepdfa2i/AssetParameters/11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32/ArtifactHash"
+                  }
+                }
+              },
+              "dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5": {
+                "id": "dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5",
+                "path": "multipagepdfa2i/AssetParameters/dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "multipagepdfa2i/AssetParameters/dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "multipagepdfa2i/AssetParameters/dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "multipagepdfa2i/AssetParameters/dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5/ArtifactHash"
+                  }
+                }
+              },
+              "392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0": {
+                "id": "392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0",
+                "path": "multipagepdfa2i/AssetParameters/392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "multipagepdfa2i/AssetParameters/392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "multipagepdfa2i/AssetParameters/392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "multipagepdfa2i/AssetParameters/392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0/ArtifactHash"
+                  }
+                }
+              },
+              "16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36": {
+                "id": "16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36",
+                "path": "multipagepdfa2i/AssetParameters/16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "multipagepdfa2i/AssetParameters/16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "multipagepdfa2i/AssetParameters/16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "multipagepdfa2i/AssetParameters/16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36/ArtifactHash"
+                  }
+                }
+              },
+              "da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6": {
+                "id": "da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6",
+                "path": "multipagepdfa2i/AssetParameters/da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "multipagepdfa2i/AssetParameters/da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "multipagepdfa2i/AssetParameters/da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "multipagepdfa2i/AssetParameters/da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6/ArtifactHash"
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_analyzepdf": {
+            "id": "multipagepdfa2i_analyzepdf",
+            "path": "multipagepdfa2i/multipagepdfa2i_analyzepdf",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "multipagepdfa2i/multipagepdfa2i_analyzepdf/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "multipagepdfa2i/multipagepdfa2i_analyzepdf/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "multipagepdfa2i/multipagepdfa2i_analyzepdf/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_analyzepdf/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3Bucket4E6AC842"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3VersionKey4B370E43"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3VersionKey4B370E43"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "lambda_function.lambda_handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "multipagepdfa2ilamroleanalyzepdf7AF514D8",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.8",
+                    "environment": {
+                      "variables": {
+                        "sqs_url": {
+                          "Ref": "multipagepdfa2itextractsqs6E080302"
+                        },
+                        "human_workflow_arn": ""
+                      }
+                    },
+                    "functionName": "multipagepdfa2i_analyzepdf",
+                    "memorySize": 3000,
+                    "timeout": 180
+                  }
+                }
+              },
+              "SqsEventSource:multipagepdfa2imultipagepdfa2itextractsqs2C6A7182": {
+                "id": "SqsEventSource:multipagepdfa2imultipagepdfa2itextractsqs2C6A7182",
+                "path": "multipagepdfa2i/multipagepdfa2i_analyzepdf/SqsEventSource:multipagepdfa2imultipagepdfa2itextractsqs2C6A7182",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i_analyzepdf/SqsEventSource:multipagepdfa2imultipagepdfa2itextractsqs2C6A7182/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::EventSourceMapping",
+                      "aws:cdk:cloudformation:props": {
+                        "eventSourceArn": {
+                          "Fn::GetAtt": [
+                            "multipagepdfa2itextractsqs6E080302",
+                            "Arn"
+                          ]
+                        },
+                        "functionName": {
+                          "Ref": "multipagepdfa2ianalyzepdf634F2189"
+                        },
+                        "batchSize": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_humancomplete": {
+            "id": "multipagepdfa2i_humancomplete",
+            "path": "multipagepdfa2i/multipagepdfa2i_humancomplete",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "multipagepdfa2i/multipagepdfa2i_humancomplete/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "multipagepdfa2i/multipagepdfa2i_humancomplete/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "multipagepdfa2i/multipagepdfa2i_humancomplete/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_humancomplete/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3Bucket7F9F1FCB"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3VersionKey83C1EAFC"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3VersionKey83C1EAFC"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "lambda_function.lambda_handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "multipagepdfa2ilamrolehumancomplete0FA866AF",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.8",
+                    "functionName": "multipagepdfa2i_humancomplete",
+                    "memorySize": 3000,
+                    "timeout": 900
+                  }
+                }
+              },
+              "AllowEventRulemultipagepdfa2imultipadepdfa2iHumanReviewComplete23C2B3E3": {
+                "id": "AllowEventRulemultipagepdfa2imultipadepdfa2iHumanReviewComplete23C2B3E3",
+                "path": "multipagepdfa2i/multipagepdfa2i_humancomplete/AllowEventRulemultipagepdfa2imultipadepdfa2iHumanReviewComplete23C2B3E3",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                  "aws:cdk:cloudformation:props": {
+                    "action": "lambda:InvokeFunction",
+                    "functionName": {
+                      "Fn::GetAtt": [
+                        "multipagepdfa2ihumancomplete182FEA89",
+                        "Arn"
+                      ]
+                    },
+                    "principal": "events.amazonaws.com",
+                    "sourceArn": {
+                      "Fn::GetAtt": [
+                        "multipadepdfa2iHumanReviewComplete9B2C26FE",
+                        "Arn"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_wrapup": {
+            "id": "multipagepdfa2i_wrapup",
+            "path": "multipagepdfa2i/multipagepdfa2i_wrapup",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "multipagepdfa2i/multipagepdfa2i_wrapup/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "multipagepdfa2i/multipagepdfa2i_wrapup/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "multipagepdfa2i/multipagepdfa2i_wrapup/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_wrapup/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3BucketA8221975"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3VersionKey14245DD7"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3VersionKey14245DD7"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "lambda_function.lambda_handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "multipagepdfa2ilamrolewrapupC95926A1",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.8",
+                    "functionName": "multipagepdfa2i_wrapup",
+                    "memorySize": 3000,
+                    "timeout": 900
+                  }
+                }
+              }
+            }
+          },
+          "PDF. Conver to PNGs": {
+            "id": "PDF. Conver to PNGs",
+            "path": "multipagepdfa2i/PDF. Conver to PNGs"
+          },
+          "Wrapup and Clean": {
+            "id": "Wrapup and Clean",
+            "path": "multipagepdfa2i/Wrapup and Clean"
+          },
+          "Perform Textract and A2I": {
+            "id": "Perform Textract and A2I",
+            "path": "multipagepdfa2i/Perform Textract and A2I"
+          },
+          "Process_Map": {
+            "id": "Process_Map",
+            "path": "multipagepdfa2i/Process_Map"
+          },
+          "Image. Passing.": {
+            "id": "Image. Passing.",
+            "path": "multipagepdfa2i/Image. Passing."
+          },
+          "PDF or Image?": {
+            "id": "PDF or Image?",
+            "path": "multipagepdfa2i/PDF or Image?"
+          },
+          "multipagepdfa2i_stepfunction": {
+            "id": "multipagepdfa2i_stepfunction",
+            "path": "multipagepdfa2i/multipagepdfa2i_stepfunction",
+            "children": {
+              "Role": {
+                "id": "Role",
+                "path": "multipagepdfa2i/multipagepdfa2i_stepfunction/Role",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i_stepfunction/Role/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "states.",
+                                      {
+                                        "Ref": "AWS::Region"
+                                      },
+                                      ".amazonaws.com"
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "multipagepdfa2i/multipagepdfa2i_stepfunction/Role/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "multipagepdfa2i/multipagepdfa2i_stepfunction/Role/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "lambda:InvokeFunction",
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::GetAtt": [
+                                      "multipagepdfa2ipngextractDD0BB0CE",
+                                      "Arn"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "Action": "lambda:InvokeFunction",
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::GetAtt": [
+                                      "multipagepdfa2iwrapupA9D980CE",
+                                      "Arn"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "Action": "sqs:SendMessage",
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::GetAtt": [
+                                      "multipagepdfa2itextractsqs6E080302",
+                                      "Arn"
+                                    ]
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "multipagepdfa2istepfunctionRoleDefaultPolicyA027783E",
+                            "roles": [
+                              {
+                                "Ref": "multipagepdfa2istepfunctionRole598387CE"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_stepfunction/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::StepFunctions::StateMachine",
+                  "aws:cdk:cloudformation:props": {
+                    "roleArn": {
+                      "Fn::GetAtt": [
+                        "multipagepdfa2istepfunctionRole598387CE",
+                        "Arn"
+                      ]
+                    },
+                    "definitionString": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "{\"StartAt\":\"PDF or Image?\",\"States\":{\"PDF or Image?\":{\"Type\":\"Choice\",\"Choices\":[{\"Variable\":\"$.extension\",\"StringEquals\":\"pdf\",\"Next\":\"PDF. Conver to PNGs\"},{\"Variable\":\"$.extension\",\"StringEquals\":\"png\",\"Next\":\"Image. Passing.\"},{\"Variable\":\"$.extension\",\"StringEquals\":\"jpg\",\"Next\":\"Image. Passing.\"}]},\"PDF. Conver to PNGs\":{\"Next\":\"Process_Map\",\"Type\":\"Task\",\"ResultPath\":\"$.image_keys\",\"Resource\":\"",
+                          {
+                            "Fn::GetAtt": [
+                              "multipagepdfa2ipngextractDD0BB0CE",
+                              "Arn"
+                            ]
+                          },
+                          "\"},\"Process_Map\":{\"Type\":\"Map\",\"ResultPath\":null,\"Next\":\"Wrapup and Clean\",\"Parameters\":{\"id.$\":\"$.id\",\"bucket.$\":\"$.bucket\",\"key.$\":\"$.key\",\"wip_key.$\":\"$$.Map.Item.Value\"},\"Iterator\":{\"StartAt\":\"Perform Textract and A2I\",\"States\":{\"Perform Textract and A2I\":{\"End\":true,\"Type\":\"Task\",\"Resource\":\"arn:",
+                          {
+                            "Ref": "AWS::Partition"
+                          },
+                          ":states:::sqs:sendMessage.waitForTaskToken\",\"Parameters\":{\"QueueUrl\":\"",
+                          {
+                            "Ref": "multipagepdfa2itextractsqs6E080302"
+                          },
+                          "\",\"MessageBody\":{\"token.$\":\"$$.Task.Token\",\"id.$\":\"$.id\",\"bucket.$\":\"$.bucket\",\"key.$\":\"$.key\",\"wip_key.$\":\"$.wip_key\"}}}}},\"ItemsPath\":\"$.image_keys\"},\"Image. Passing.\":{\"Type\":\"Pass\",\"Result\":[\"single_image\"],\"ResultPath\":\"$.image_keys\",\"Next\":\"Process_Map\"},\"Wrapup and Clean\":{\"End\":true,\"Type\":\"Task\",\"Resource\":\"arn:",
+                          {
+                            "Ref": "AWS::Partition"
+                          },
+                          ":states:::lambda:invoke\",\"Parameters\":{\"FunctionName\":\"",
+                          {
+                            "Fn::GetAtt": [
+                              "multipagepdfa2iwrapupA9D980CE",
+                              "Arn"
+                            ]
+                          },
+                          "\",\"Payload.$\":\"$\"}}}}"
+                        ]
+                      ]
+                    },
+                    "stateMachineName": "multipagepdfa2i_stepfunction"
+                  }
+                }
+              }
+            }
+          },
+          "multipagepdfa2i_kickoff": {
+            "id": "multipagepdfa2i_kickoff",
+            "path": "multipagepdfa2i/multipagepdfa2i_kickoff",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "multipagepdfa2i/multipagepdfa2i_kickoff/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "multipagepdfa2i/multipagepdfa2i_kickoff/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "multipagepdfa2i/multipagepdfa2i_kickoff/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipagepdfa2i_kickoff/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3Bucket106913D7"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3VersionKeyE8489DED"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3VersionKeyE8489DED"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "lambda_function.lambda_handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "multipagepdfa2ilamrolekickoffFDBDF67D",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.8",
+                    "environment": {
+                      "variables": {
+                        "sqs_url": {
+                          "Ref": "multipagepdfa2isfsqs6271462A"
+                        },
+                        "state_machine_arn": {
+                          "Ref": "multipagepdfa2istepfunctionFBF54DA9"
+                        }
+                      }
+                    },
+                    "functionName": "multipagepdfa2i_kickoff",
+                    "memorySize": 3000,
+                    "timeout": 300
+                  }
+                }
+              },
+              "SqsEventSource:multipagepdfa2imultipagepdfa2isfsqsCEAC7484": {
+                "id": "SqsEventSource:multipagepdfa2imultipagepdfa2isfsqsCEAC7484",
+                "path": "multipagepdfa2i/multipagepdfa2i_kickoff/SqsEventSource:multipagepdfa2imultipagepdfa2isfsqsCEAC7484",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/multipagepdfa2i_kickoff/SqsEventSource:multipagepdfa2imultipagepdfa2isfsqsCEAC7484/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::EventSourceMapping",
+                      "aws:cdk:cloudformation:props": {
+                        "eventSourceArn": {
+                          "Fn::GetAtt": [
+                            "multipagepdfa2isfsqs6271462A",
+                            "Arn"
+                          ]
+                        },
+                        "functionName": {
+                          "Ref": "multipagepdfa2ikickoff4B6F939D"
+                        },
+                        "batchSize": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "BucketNotificationsHandler050a0587b7544547bf325f094a3db834": {
+            "id": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
+            "path": "multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
+            "children": {
+              "Role": {
+                "id": "Role",
+                "path": "multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "s3:PutBucketNotification",
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+                            "roles": [
+                              {
+                                "Ref": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource"
+              }
+            }
+          },
+          "multipadepdfa2i_HumanReviewComplete": {
+            "id": "multipadepdfa2i_HumanReviewComplete",
+            "path": "multipagepdfa2i/multipadepdfa2i_HumanReviewComplete",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "multipagepdfa2i/multipadepdfa2i_HumanReviewComplete/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Events::Rule",
+                  "aws:cdk:cloudformation:props": {
+                    "eventPattern": {
+                      "detail-type": [
+                        "SageMaker A2I HumanLoop Status Change"
+                      ],
+                      "source": [
+                        "aws.sagemaker"
+                      ]
+                    },
+                    "state": "ENABLED",
+                    "targets": [
+                      {
+                        "id": "Target0",
+                        "arn": {
+                          "Fn::GetAtt": [
+                            "multipagepdfa2ihumancomplete182FEA89",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

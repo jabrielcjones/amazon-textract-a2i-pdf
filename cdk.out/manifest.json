@@ -1,0 +1,1197 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "multipagepdfa2i": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "multipagepdfa2i.template.json"
+      },
+      "metadata": {
+        "/multipagepdfa2i": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32.jar",
+              "id": "11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32",
+              "packaging": "file",
+              "sourceHash": "11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32",
+              "s3BucketParameter": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3BucketBA38A70B",
+              "s3KeyParameter": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3VersionKey59D503D6",
+              "artifactHashParameter": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32ArtifactHash706EB370"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/construct-compat.js:310:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:130:29)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5",
+              "id": "dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5",
+              "packaging": "zip",
+              "sourceHash": "dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5",
+              "s3BucketParameter": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3Bucket4E6AC842",
+              "s3KeyParameter": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3VersionKey4B370E43",
+              "artifactHashParameter": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5ArtifactHashF62E5200"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/construct-compat.js:310:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:130:29)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0",
+              "id": "392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0",
+              "packaging": "zip",
+              "sourceHash": "392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0",
+              "s3BucketParameter": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3Bucket7F9F1FCB",
+              "s3KeyParameter": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3VersionKey83C1EAFC",
+              "artifactHashParameter": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0ArtifactHash3FF94DCF"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/construct-compat.js:310:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:130:29)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36",
+              "id": "16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36",
+              "packaging": "zip",
+              "sourceHash": "16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36",
+              "s3BucketParameter": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3BucketA8221975",
+              "s3KeyParameter": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3VersionKey14245DD7",
+              "artifactHashParameter": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36ArtifactHashEF23522B"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/construct-compat.js:310:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:130:29)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6",
+              "id": "da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6",
+              "packaging": "zip",
+              "sourceHash": "da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6",
+              "s3BucketParameter": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3Bucket106913D7",
+              "s3KeyParameter": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3VersionKeyE8489DED",
+              "artifactHashParameter": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6ArtifactHash576C6883"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/construct-compat.js:310:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:130:29)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2i1BE8D0A8",
+            "trace": [
+              "new Bucket (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/bucket.js:389:26)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2iNotifications6F579C79",
+            "trace": [
+              "BucketNotifications.createResourceOnce (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:83:29)",
+              "BucketNotifications.addNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:39:31)",
+              "Bucket.addEventNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/bucket.js:538:28)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multia2ipdf_callback": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": "multia2ipdf_callback",
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/construct-compat.js:310:62)",
+              "new Table (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:325:23)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multia2ipdf_callback/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multia2ipdfcallbackE428C7FA",
+            "trace": [
+              "new Table (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:306:22)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_sf_sqs/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2isfsqs6271462A",
+            "trace": [
+              "new Queue (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-sqs/lib/queue.js:48:23)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_sf_sqs/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2isfsqsPolicy23F7D822",
+            "trace": [
+              "new QueuePolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-sqs/lib/policy.js:17:9)",
+              "Queue.addToResourcePolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-sqs/lib/queue-base.js:20:27)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/grant.js:51:49)",
+              "Queue.grant (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-sqs/lib/queue-base.js:89:26)",
+              "Queue.grantSendMessages (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-sqs/lib/queue-base.js:60:26)",
+              "SqsDestination.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-notifications/lib/sqs.js:18:20)",
+              "BucketNotifications.addNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:42:36)",
+              "Bucket.addEventNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/bucket.js:538:28)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_textract_sqs/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2itextractsqs6E080302",
+            "trace": [
+              "new Queue (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-sqs/lib/queue.js:48:23)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_kickoff/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamrolekickoffFDBDF67D",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:42:22)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_kickoff/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamrolekickoffDefaultPolicy614AD7A4",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/policy.js:31:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:164:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:171:21)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_pngextract/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamrolepngextractD218F9FD",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:42:22)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_pngextract/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamrolepngextractDefaultPolicy7A0AD937",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/policy.js:31:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:164:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:171:21)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_analyzepdf/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamroleanalyzepdf7AF514D8",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:42:22)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_analyzepdf/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamroleanalyzepdfDefaultPolicy3270794C",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/policy.js:31:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:164:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:171:21)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_humancomplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamrolehumancomplete0FA866AF",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:42:22)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_humancomplete/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamrolehumancompleteDefaultPolicy0C30B1CB",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/policy.js:31:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:164:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:171:21)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_wrapup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamrolewrapupC95926A1",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:42:22)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_lam_role_wrapup/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ilamrolewrapupDefaultPolicy209224FB",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/policy.js:31:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:164:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:171:21)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_pngextract/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ipngextractDD0BB0CE",
+            "trace": [
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:106:26)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3BucketBA38A70B",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32S3VersionKey59D503D6",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters11f99443012e3074b3f79b0db6cf59b2aaa17e90ae1d10d6b80a0eca2cc14b32ArtifactHash706EB370",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3Bucket4E6AC842",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5S3VersionKey4B370E43",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/dd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersdd7092edcf9415c09ab285409e3c53a77107f0f93d8edc4cea39ad753b6703a5ArtifactHashF62E5200",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3Bucket7F9F1FCB",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0S3VersionKey83C1EAFC",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters392afbc614e7a22a4b587a35b9edba54a99f0d84e66ac56f7909e1a39dda8ae0ArtifactHash3FF94DCF",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3BucketA8221975",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36S3VersionKey14245DD7",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters16785d31a0a851eb0cafbca6e34dd60b2261cbf5f61747adfa74b1d060070f36ArtifactHashEF23522B",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3Bucket106913D7",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6S3VersionKeyE8489DED",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/AssetParameters/da7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersda7fdb79e19b8adc5875f4028e37c81e15f782d21fcab333c94910468f5f38c6ArtifactHash576C6883",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:120:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:58:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:31)",
+              "new Asset (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:33)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_analyzepdf/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ianalyzepdf634F2189",
+            "trace": [
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:106:26)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_analyzepdf/SqsEventSource:multipagepdfa2imultipagepdfa2itextractsqs2C6A7182/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ianalyzepdfSqsEventSourcemultipagepdfa2imultipagepdfa2itextractsqs2C6A71821B13F6C4",
+            "trace": [
+              "new EventSourceMapping (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/event-source-mapping.js:44:39)",
+              "Function.addEventSourceMapping (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:67:16)",
+              "SqsEventSource.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda-event-sources/lib/sqs.js:17:43)",
+              "Function.addEventSource (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:109:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_humancomplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ihumancomplete182FEA89",
+            "trace": [
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:106:26)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_humancomplete/AllowEventRulemultipagepdfa2imultipadepdfa2iHumanReviewComplete23C2B3E3": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ihumancompleteAllowEventRulemultipagepdfa2imultipadepdfa2iHumanReviewComplete23C2B3E30177ADBE",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:24:9)",
+              "Object.addLambdaPermission (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-events-targets/lib/util.js:30:17)",
+              "LambdaFunction.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-events-targets/lib/lambda.js:19:16)",
+              "Rule.addTarget (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-events/lib/rule.js:76:36)",
+              "new Rule (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-events/lib/rule.js:43:18)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_wrapup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2iwrapupA9D980CE",
+            "trace": [
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:106:26)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_stepfunction/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2istepfunctionRole598387CE",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:42:22)",
+              "new StateMachine (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-stepfunctions/lib/state-machine.js:166:35)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_stepfunction/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2istepfunctionRoleDefaultPolicyA027783E",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/policy.js:31:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:164:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:171:21)",
+              "StateMachine.addToRolePolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-stepfunctions/lib/state-machine.js:219:19)",
+              "new StateMachine (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-stepfunctions/lib/state-machine.js:205:18)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_stepfunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2istepfunctionFBF54DA9",
+            "trace": [
+              "new StateMachine (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-stepfunctions/lib/state-machine.js:196:26)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_kickoff/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ikickoff4B6F939D",
+            "trace": [
+              "new Function (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function.js:106:26)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipagepdfa2i_kickoff/SqsEventSource:multipagepdfa2imultipagepdfa2isfsqsCEAC7484/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipagepdfa2ikickoffSqsEventSourcemultipagepdfa2imultipagepdfa2isfsqsCEAC74840BF6C968",
+            "trace": [
+              "new EventSourceMapping (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/event-source-mapping.js:44:39)",
+              "Function.addEventSourceMapping (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:67:16)",
+              "SqsEventSource.bind (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda-event-sources/lib/sqs.js:17:43)",
+              "Function.addEventSource (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:109:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:42:22)",
+              "new NotificationsResourceHandler (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:26:22)",
+              "Function.singleton (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:75:22)",
+              "BucketNotifications.createResourceOnce (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:82:94)",
+              "BucketNotifications.addNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:39:31)",
+              "Bucket.addEventNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/bucket.js:538:28)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/policy.js:31:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:164:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-iam/lib/role.js:171:21)",
+              "new NotificationsResourceHandler (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:33:14)",
+              "Function.singleton (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:75:22)",
+              "BucketNotifications.createResourceOnce (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:82:94)",
+              "BucketNotifications.addNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:39:31)",
+              "Bucket.addEventNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/bucket.js:538:28)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691",
+            "trace": [
+              "new NotificationsResourceHandler (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:49:26)",
+              "Function.singleton (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:75:22)",
+              "BucketNotifications.createResourceOnce (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:82:94)",
+              "BucketNotifications.addNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:39:31)",
+              "Bucket.addEventNotification (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-s3/lib/bucket.js:538:28)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:51",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3436:25",
+              "Kernel._ensureSync (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4082:20)",
+              "Kernel.invoke (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3435:26)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/multipagepdfa2i/multipadepdfa2i_HumanReviewComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "multipadepdfa2iHumanReviewComplete9B2C26FE",
+            "trace": [
+              "new Rule (/tmp/jsii-kernel-v1wb3l/node_modules/@aws-cdk/aws-events/lib/rule.js:26:26)",
+              "/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:49",
+              "Kernel._wrapSandboxCode (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4105:16)",
+              "Kernel._create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3621:26)",
+              "Kernel.create (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3356:21)",
+              "KernelHost.processRequest (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13162:28)",
+              "KernelHost.run (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13100:14)",
+              "Immediate._onImmediate (/home/jabrielcjones/.local/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13103:37)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cloud-assembly-schema": "1.54.0",
+      "@aws-cdk/cx-api": "1.54.0",
+      "@aws-cdk/core": "1.54.0",
+      "@aws-cdk/region-info": "1.54.0",
+      "@aws-cdk/aws-iam": "1.54.0",
+      "@aws-cdk/aws-events": "1.54.0",
+      "@aws-cdk/aws-kms": "1.54.0",
+      "@aws-cdk/aws-s3": "1.54.0",
+      "@aws-cdk/aws-cloudwatch": "1.54.0",
+      "@aws-cdk/aws-codeguruprofiler": "1.54.0",
+      "@aws-cdk/aws-logs": "1.54.0",
+      "@aws-cdk/aws-ssm": "1.54.0",
+      "@aws-cdk/aws-ec2": "1.54.0",
+      "@aws-cdk/aws-efs": "1.54.0",
+      "@aws-cdk/assets": "1.54.0",
+      "@aws-cdk/aws-s3-assets": "1.54.0",
+      "@aws-cdk/aws-sqs": "1.54.0",
+      "@aws-cdk/aws-lambda": "1.54.0",
+      "@aws-cdk/aws-route53": "1.54.0",
+      "@aws-cdk/aws-certificatemanager": "1.54.0",
+      "@aws-cdk/aws-cloudfront": "1.54.0",
+      "@aws-cdk/aws-s3-deployment": "1.54.0",
+      "@aws-cdk/aws-sns": "1.54.0",
+      "@aws-cdk/aws-s3-notifications": "1.54.0",
+      "@aws-cdk/aws-autoscaling-common": "1.54.0",
+      "@aws-cdk/aws-applicationautoscaling": "1.54.0",
+      "@aws-cdk/aws-cloudformation": "1.54.0",
+      "@aws-cdk/custom-resources": "1.54.0",
+      "@aws-cdk/aws-dynamodb": "1.54.0",
+      "@aws-cdk/aws-stepfunctions": "1.54.0",
+      "@aws-cdk/aws-ecr": "1.54.0",
+      "@aws-cdk/aws-elasticloadbalancing": "1.54.0",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.54.0",
+      "@aws-cdk/aws-autoscaling": "1.54.0",
+      "@aws-cdk/aws-sns-subscriptions": "1.54.0",
+      "@aws-cdk/aws-autoscaling-hooktargets": "1.54.0",
+      "@aws-cdk/aws-ecr-assets": "1.54.0",
+      "@aws-cdk/aws-apigateway": "1.54.0",
+      "@aws-cdk/aws-cognito": "1.54.0",
+      "@aws-cdk/aws-route53-targets": "1.54.0",
+      "@aws-cdk/aws-sam": "1.54.0",
+      "@aws-cdk/aws-secretsmanager": "1.54.0",
+      "@aws-cdk/aws-servicediscovery": "1.54.0",
+      "@aws-cdk/aws-ecs": "1.54.0",
+      "@aws-cdk/aws-batch": "1.54.0",
+      "@aws-cdk/aws-glue": "1.54.0",
+      "@aws-cdk/aws-stepfunctions-tasks": "1.54.0",
+      "@aws-cdk/aws-kinesis": "1.54.0",
+      "@aws-cdk/aws-lambda-event-sources": "1.54.0",
+      "@aws-cdk/aws-codecommit": "1.54.0",
+      "@aws-cdk/aws-codebuild": "1.54.0",
+      "@aws-cdk/aws-codepipeline": "1.54.0",
+      "@aws-cdk/aws-events-targets": "1.54.0",
+      "jsii-runtime": "Python/3.8.5"
+    }
+  }
+}
